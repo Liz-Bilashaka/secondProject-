@@ -1,5 +1,5 @@
 # secondProject-
-JavaScript Quiz 
+JavaScript Quiz - It will be based on a single page application
 
 # About the project 
 This project will be a quiz assesing the basic knowledge of cars. It will showcase more JS skills and will be made of 20 questions in total. Users will actually be assessed on 5 random questions of the 20 and everytime the quiz is re-attempted the questions will be shuffled. The quiz will require users to answer the questions by selecting on one of the three options available. Once they have selected an answer and navigated through 5 questions, their results will be displayed on the score page. 
@@ -24,7 +24,7 @@ The quiz will promt you to insert your name before starting
 - HTML
 - CSS
 - Bootsrap  
-It will be based on a single page application
+
 
 # Project structure 
 - JS folder 
@@ -78,12 +78,14 @@ https://getbootstrap.com/
 
 - Shuffle Quiz and Slice the amount we want
 /* https://stackoverflow.com/questions/19269545/how-to-get-a-number-of-random-elements-from-an-array */
-const shuffle = (quiz, number) =>
+
+< const shuffle = (quiz, number) =>
   quiz
     .map((x) => ({ x, r: Math.random() }))
     .sort((a, b) => a.r - b.r)
     .map((a) => a.x)
     .slice(0, number);
+    >
 
 #  Testing procedures and findings.
 <h1> HTML file </h1>
