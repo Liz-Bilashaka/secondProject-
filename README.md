@@ -103,22 +103,7 @@ https://beautifytools.com/javascript-validator.php
 <p> 'e' is defined but never used - removed (e) from (storeUserNameBtn.addEventListener("click", function (e) )</p>
 <p> 2 unused varibles (listOfQuestion and resultsContainer ) - removed these variables  </p>
 <p> 'letter' is not defined - defined letter using const </p>
-<p> The body of a for in should be wrapped in an if statement to filter unwanted properties from the prototype. - wrapped in an if statement 
-<script>
-if (letter > 0) {
-				// ...add an HTML radio button 
-				options.push(
-					`<label class="form-check-label">
-            <input type="radio" class="form-check-input"  name="question${
-              questionNumber + 1
-            }" value="${letter}" required>
-            ${letter} :
-            ${currentQuestion.options[letter]}
-          </label>`
-				);
-
-			}
-</script>
+<p> The body of a for in should be wrapped in an if statement to filter unwanted properties from the prototype. - wrapped in an if statement (	// and for each available answer... line 274)
 </p>
 <p> Enabled new JavaScript features ES6 to fix the use 'esversion: 6' warnings.</p>
 
