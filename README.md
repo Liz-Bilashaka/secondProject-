@@ -79,18 +79,19 @@ https://getbootstrap.com/
 - Shuffle Quiz and Slice the amount we want
 /* https://stackoverflow.com/questions/19269545/how-to-get-a-number-of-random-elements-from-an-array */
 
-< const shuffle = (quiz, number) =>
+<script>
+const shuffle = (quiz, number) =>
   quiz
     .map((x) => ({ x, r: Math.random() }))
     .sort((a, b) => a.r - b.r)
     .map((a) => a.x)
     .slice(0, number);
     >
-
+</script>
 #  Testing procedures and findings.
 <h1> HTML file </h1>
-- Consider adding a lang attribute to the html start tag to declare the language of this document - added lan tag
-- Bad value fullName for attribute type on element input. —> change type to text 
+<p> Consider adding a lang attribute to the html start tag to declare the language of this document - added lan tag</p>
+<p> Bad value fullName for attribute type on element input. —> change type to text </p>
 <p> No syntax errors! </p>
 
 <h1> CSS file </h1>
@@ -99,10 +100,10 @@ https://jigsaw.w3.org/css-validator/
 
 <h1>JS file  </h1>
 https://beautifytools.com/javascript-validator.php
-- 'e' is defined but never used - removed (e) from (storeUserNameBtn.addEventListener("click", function (e) )
-- 2 unused varibles (listOfQuestion and resultsContainer ) - removed these variables 
-- 'letter' is not defined - defined letter using const
-- The body of a for in should be wrapped in an if statement to filter unwanted properties from the prototype. - wrapped in an if statement 
+<p> 'e' is defined but never used - removed (e) from (storeUserNameBtn.addEventListener("click", function (e) )</p>
+<p> 2 unused varibles (listOfQuestion and resultsContainer ) - removed these variables  </p>
+<p> 'letter' is not defined - defined letter using const </p>
+<p> The body of a for in should be wrapped in an if statement to filter unwanted properties from the prototype. - wrapped in an if statement 
 if (letter > 0) {
 				// ...add an HTML radio button 
 				options.push(
@@ -116,8 +117,8 @@ if (letter > 0) {
 				);
 
 			}
-- Enabled new JavaScript features ES6 to fix the use 'esversion: 6' warnings.
-
+</p>
+<p> Enabled new JavaScript features ES6 to fix the use 'esversion: 6' warnings.</p>
 
 <p> No syntax errors! </p>
 
