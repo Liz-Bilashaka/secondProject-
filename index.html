@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Car Quiz</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <meta
+      name="description"
+      content="Liz Bilashaka, HTML5, CSS3, JavaScript, bootstrap"
+    />
+    <meta name="author" content="Liz Bilashaka" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- https://www.w3schools.com/bootstrap5/bootstrap_get_started.php for bootstrap links "latests complied and minified CSS + Latest complied Javascript"-->
+    <!-- Latest compiled and minified CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="./images/LizB-Tech-logos.jpeg"
+            alt="LizB Logo"
+            style="width: 40px"
+            class="rounded-pill"
+          />
+        </a>
+
+        <div id="gamerName"></div>
+      </div>
+    </nav>
+    <!-- End Navigiation -->
+    <div id="content-wrap">
+      <div class="container">
+        <div id="introductionPage">
+          <div class="mt-4 p-5 bg-primary text-white rounded">
+            <h1>Welcome to Liz B's cars quiz</h1>
+            <h4>This quiz will assess your random knowledge of cars</h4>
+          </div>
+
+          <h2>Quiz instructions:</h2>
+
+          <p>
+            The quiz required users to answer a set of 5 random car questions
+          </p>
+          <p>
+            Once the quiz has started you cannot navigate back to the previous
+            page
+          </p>
+          <p>Once the quiz has been completed, your score will be displayed</p>
+          <p>
+            If you chose to retake the quiz you can click on the restart button
+            and you will be navigated back to the questions screen, where a new
+            set of 5 questions will be displayed
+          </p>
+          <p>
+            To end the quiz simply click on the end quiz button and you will be
+            navigated back to the home screen
+          </p>
+          <p>The quiz will promt you to insert your name before starting</p>
+
+          <form>
+            <div class="mb-3 mt-3">
+              <label for="fullName" class="form-label">Full Name:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="fullName"
+                value=""
+                placeholder="Enter Full Name"
+                name="fullName"
+                required
+              />
+            </div>
+            <button class="btn btn-primary" id="storeUserName">Submit</button>
+            <div id="showFullName"></div>
+          </form>
+        </div>
+        <div id="questionPage">
+          <h1>Question</h1>
+          <div id="quiz"></div>
+          <button id="submit" class="btn btn-danger">Submit Quiz</button>
+
+          <div id="results"></div>
+        </div>
+        <div id="scorePage">
+          <h1>score</h1>
+          <p>
+            Thank you for answering the questions. Please find your score below.
+            To retake the quiz, click on the retry button that will navigate you
+            back to the home page
+          </p>
+          <div id="scoreInfo"></div>
+          <div id="acknowledgement"></div>
+          <div>
+            <button id="restart" type="button" class="btn btn-warning">
+              Restart
+            </button>
+            <button id="endQuiz" class="btn btn-danger">End Quiz</button>
+          </div>
+        </div>
+      </div>
+      <!--  <footer id="footer"> -->
+      <footer class="bg-dark text-center text-white">
+        <!-- Copyright -->
+        <div
+          id="footer"
+          class="text-center p-3"
+          style="background-color: rgba(0, 0, 0, 0.2)"
+        >
+          &copy;Copyright LizB <span id="reservedYear"></span> All rights
+          reserved:
+          <a
+            class="text-white"
+            href="https://liz-bilashaka.github.io/myPortfolio/"
+            target="_blank"
+            >My Portfolio</a
+          >
+        </div>
+        <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
+    </div>
+
+    <script src="./js/index.js" async defer></script>
+    <!-- code to disable inspect so users cannot see quiz answer 
+    https://stackoverflow.com/questions/28690564/is-it-possible-to-remove-inspect-element-->
+    <script>
+      document.addEventListener("contextmenu", (event) =>
+        event.preventDefault()
+      );
+      document.onkeydown = function (e) {
+        if (event.keyCode == 123) {
+          return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode == "I".charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.shiftKey && e.keyCode == "J".charCodeAt(0)) {
+          return false;
+        }
+        if (e.ctrlKey && e.keyCode == "U".charCodeAt(0)) {
+          return false;
+        }
+      };
+    </script>
+  </body>
+</html>
