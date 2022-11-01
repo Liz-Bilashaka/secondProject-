@@ -104,6 +104,7 @@ https://beautifytools.com/javascript-validator.php
 <p> 2 unused varibles (listOfQuestion and resultsContainer ) - removed these variables  </p>
 <p> 'letter' is not defined - defined letter using const </p>
 <p> The body of a for in should be wrapped in an if statement to filter unwanted properties from the prototype. - wrapped in an if statement 
+<script>
 if (letter > 0) {
 				// ...add an HTML radio button 
 				options.push(
@@ -117,6 +118,7 @@ if (letter > 0) {
 				);
 
 			}
+</script>
 </p>
 <p> Enabled new JavaScript features ES6 to fix the use 'esversion: 6' warnings.</p>
 
